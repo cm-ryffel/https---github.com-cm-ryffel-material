@@ -1,62 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="hom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Materialize</title>
 </head>
 
 <body>
-    <nav class="blue darken-3">
-        <div class="nav-wrapper container">
-            <a class="brand-logo left"> 
-                Materialize
-            </a>
-            <ul class="right">
-                 <li><a href="./home.html">Home</a></li>
-                <li><a href="./Blog.html">Blog</a></li>
-                <li><a href="./Content.html">Content</a></li>
-            </ul>
-        </div>
-    </nav>
+    <script src="js/materialize.min.js"></script>
 
-    <div class="content">
-        <div class=""></div>
-        <div class="card"></div>
+    <div class="navbar">
+        <nav class="indigo lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo"> Materialize
+                </a>
+                <!--основное меню прячется на планшетном
+отображении и меньше-->
+                <ul class="right hide-on-med-and-down">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- для создания выезжающего меню создадим
+список с классом sidenav -->
+                <ul id="nav-mobile" class="sidenav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!--иконка для мобильного меню -->
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded',
+            function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems);
+            });
+    </script>
 
-    <footer class="page-footer blue darken-3">
+    <section id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m10 offset-m1 l6 xl5">
+                        <h2 class="header center white-text">
+                            Talk to a Professional
+                        </h2>
+                        <h5 class="center white-text">
+                            Lorem nemo u necessitatibus veniam
+                            voluptatum tempora similique saepe.
+                        </h5>
+                    </div>
+                    <div class="col s12 m10 offset-m1 l6 xl5 offset-xl2 center">
+                        <br><br>
+                        <div class="row pink white-text">
+                            <form action="">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">
+                                        person</i>
+                                    <input type="text" id="name" class="autocompletemy-input">
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">
+                                        phone</i>
+                                    <input type="tel" id="tel" class="autocompletemy-input">
+                                    <label for="tel">Phone</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <button type="submit" class="btn pink-text white">
+                                        Call us
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax">
+            <img src="images/city1.jpg" alt="city">
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',
+            function () {
+                var elems = document.querySelectorAll('.parallax');
+                var instances = M.Parallax.init(elems);
+            });
+    </script>
+
+    <footer class="page-footer indigo">
         <div class="container">
-          <div class="row">
-            <div class="col l1 s7">
-              <h5 class="white-text">Menu</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="./home.html">Home</a></li>
-                <li><a class="grey-text text-lighten-3" href="./Blog.html">Blog</a></li>
-                <li><a class="grey-text text-lighten-3" href="./Content.html">Content</a></li>
-              </ul>
+            <div class="row">
+                <div class="col s6">
+                    <h5 class="white-text">Menu</h5>
+                    <ul>
+                        <li><a class="white-text" href="#">
+                                Home</a>
+                        </li>
+                        <li><a class="white-text" href="blog.html">Blog</a>
+                        </li>
+                        <li><a class="white-text" href="contact.html">
+                                Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col s6 l3 offset-l3">
+                    <h5 class="white-text">Social</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://facebook.com">
+                                Facebook </a>
+                        </li>
+                        <li><a class="white-text" href="https://twitter.com">
+                                Twitter </a>
+                        </li>
+                        <li><a class="white-text" href="https://instagram.com">
+                                Instagram</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col l1 offset-l8 s3">
-              <h5 class="white-text">Social</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="./home.html">Facebook</a></li>
-                <li><a class="grey-text text-lighten-3" href="./Blog.html">Twitter</a></li>
-                <li><a class="grey-text text-lighten-3" href="./Content.html">Instagram</a></li>
-              </ul>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made with Materialize
             </div>
-          </div>
         </div>
-        <div class="footer-copyright buttom">
-          <div class="container">
-            Made withe Materialize
-          </div>
-        </div>
-      </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+    </footer>
 </body>
+
 </html>
