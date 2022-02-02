@@ -1,0 +1,7 @@
+.section{
+    margin-top: 2rem;
+}
+input::-moz-placeholder{
+    color: #5c6bc0;
+    opacity: 1;
+}

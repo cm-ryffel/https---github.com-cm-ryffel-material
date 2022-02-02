@@ -4,9 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <title>Contact</title>
 </head>
 <body>
-    
+    <script src="js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="Blog.html">
+    <link rel="stylesheet" href="home.html">
+
+
+    <div class="navbar-fixed">
+        <nav class="indigo lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo"> Materialize
+                </a>
+                <!--основное меню прячется на планшетном
+отображении и меньше-->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+                <!-- для создания выезжающего меню создадим
+список с классом sidenav -->
+                <ul id="nav-mobile" class="sidenav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <!--иконка для мобильного меню -->
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <section class="container">
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="input-field">
+                          <input placeholder="Name" id="name" type="text" class="validate">
+                        </div>
+                        <div class="input-field">
+                          <input id="email" placeholder="Email" type="email" class="validate">
+                        </div>
+                        <div class="input-field">
+                          <input id="message" type="text" class="validate" placeholder="Messange">
+                        </div>
+                        <button type="submit" class="btn pink-text white">
+                            Submit messange
+                        </button>        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="page-footer indigo">
+        <div class="container">
+            <div class="row">
+                <div class="col s6">
+                    <h5 class="white-text">Menu</h5>
+                    <ul>
+                        <li><a class="white-text" href="#">
+                                Home</a>
+                        </li>
+                        <li><a class="white-text" href="blog.html">Blog</a>
+                        </li>
+                        <li><a class="white-text" href="contact.html">
+                                Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col s6 l3 offset-l3">
+                    <h5 class="white-text">Social</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://facebook.com">
+                                Facebook </a>
+                        </li>
+                        <li><a class="white-text" href="https://twitter.com">
+                                Twitter </a>
+                        </li>
+                        <li><a class="white-text" href="https://instagram.com">
+                                Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made with Materialize
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
